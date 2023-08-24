@@ -39,21 +39,22 @@ export const theme = createTheme({
         },
       },
     },
+   
   },
   palette: {
     mode: 'light',
     primary: {
       main: '#76c893',
-      light: '#76c893',
-      dark: '#76c893',
-      contrastText: '#000',
     },
     secondary: {
       main: '#6c757d',
+      light: '#76c893',
+      dark: '#76c893',
     },
     text: {
       primary: '#6c757d',
       secondary: '#76c893',
+      
     },
     background: {
       default: '#f8f9fa',

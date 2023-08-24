@@ -11,7 +11,6 @@ interface Props {
   entry: Entry
 }
 const EditEntryDialog: React.FC<Props> = ({open, onClose, entry }) => {
-  console.log('*******************************',entry)
   const dispatch = useAppDispatch()
   const [updatedEntryName, setUpdatedEntryName] = useState(entry.name)
   const [updatedEntryCalories, setUpdatedEntryCalories] = useState(entry.calories)

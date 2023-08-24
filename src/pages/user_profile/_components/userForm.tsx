@@ -38,6 +38,7 @@ export default function UserForm() {
   const user = useAppSelector((state) => state.user.user)
   const [profile, dispatchProfile] = useReducer(reducer, {} as Profile)
   const calorieGoal = UseGoalCalculator()
+	const isDisabled = !profile.weight || !profile.height || !profile.age || !profile.gender
 
   useEffect(() => {
     function getInitialData() {
@@ -142,7 +143,7 @@ export default function UserForm() {
         InputProps={{ endAdornment: <InputAdornment position="end">kg</InputAdornment> }}
         onChange={(e) => dispatchProfile({ property: 'weight', payload: e.target.value })}
       />
-      <Button variant="contained" onClick={handleSubmit}>
+      <Button variant="contained" disabled={isDisabled} onClick={handleSubmit}>
         {mode === 'create' ? 'calculate' : 'update'}
       </Button>
     </Box>

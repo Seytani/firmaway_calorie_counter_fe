@@ -21,7 +21,6 @@ function CalorieCounter() {
     }
     const saveEntries = async () => {
       const entries = await getEntries()
-      console.log('(((((((((((((((((()))))))))))))))))))))))))))))',entries)
       dispatch(setLogs(entries))
     }
     saveEntries()

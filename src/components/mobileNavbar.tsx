@@ -95,8 +95,8 @@ export default function MobileNavbar() {
               >
                 {item.icon}
               </ListItemIcon>
-              <ListItemText sx={{ opacity: open ? 1 : 0 }}>
-                <Link href={item.url}>{item.name}</Link>
+              <ListItemText sx={{ opacity: open ? 1 : 0 ,color: 'white'}}>
+                <Link href={item.url} >{item.name}</Link>
               </ListItemText>
             </ListItemButton>
           </ListItem>
@@ -127,7 +127,7 @@ export default function MobileNavbar() {
                 {item.icon}
               </ListItemIcon>
               <ListItemText
-                sx={{ opacity: open ? 1 : 0 }}
+                sx={{ opacity: open ? 1 : 0 , color: 'white'}}
                 onClick={item.onclick}
               >
                 {item.name}

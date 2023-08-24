@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: #6c757d;
     --text-primary: #6c757d;
-    --text-secondary: #f8f9faff;
+    --text-secondary: #f8f9fa;
     --color-primary: #76c893;
     --color-green-5: #52b69a;
     --color-danger: #e01e37;
@@ -30,8 +30,8 @@ body {
 }
 
 .MuiDrawer-paper {
-  color: var(--text-secondary);
-  background-color: var(--color-primary);
+  color: #f8f9fa;
+  background-color: #76c893 !important;
   border: none;
 }
 

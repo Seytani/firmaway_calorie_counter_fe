@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Box, IconButton } from '@mui/material'
 import { AddCircle } from '@mui/icons-material'
-import { useAppDispatch } from '@/store/hooks'
 import AddEntryDialog from './addEntryDialog'
 
 interface Props {
@@ -10,7 +9,6 @@ interface Props {
 
 const AddEntry: React.FC<Props> = ({ date }) => {
   const [openAddEntryDialog, setOpenAddEntryDialog] = useState(false)
-  const dispatch = useAppDispatch()
 
   function handleOpenDialog() {
     setOpenAddEntryDialog(true)
@@ -30,12 +28,12 @@ const AddEntry: React.FC<Props> = ({ date }) => {
       }}
     >
       <IconButton
-        className="text-6xl self-end pr-5 pb-5"
+        className="self-end pr-5 pb-5"
         aria-label="addEntry"
         color="primary"
         onClick={handleOpenDialog}
       >
-        <AddCircle fontSize="inherit"/>
+        <AddCircle sx={{fontSize: '3.5rem'}}/>
       </IconButton>
       <AddEntryDialog open={openAddEntryDialog} close={handleCloseDialog} date={date}/>
     </Box>
