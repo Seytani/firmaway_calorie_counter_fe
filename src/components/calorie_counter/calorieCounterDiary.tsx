@@ -53,7 +53,7 @@ const CalorieCounterDiary: React.FC<Props> = () => {
           </IconButton>
         </Box>
         <Divider />
-        <Box className="self-center p-2">
+        <Box>
           <CurrentDaySummary entries={dailyEntries} />
         </Box>
         <Divider />
