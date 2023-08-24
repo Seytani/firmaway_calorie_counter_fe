@@ -10,7 +10,7 @@ export default function ProtectedLayout({ children }: Props) {
     <ProtectedRoute>
       <div className="flex flex-col">
         <MobileNavbar/>
-        <main className="h-screen flex justify-center grow">
+        <main className="h-screen flex justify-center grow px-5">
           {children}
         </main>
       </div>

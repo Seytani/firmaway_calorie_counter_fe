@@ -68,7 +68,7 @@ export default function Login() {
 	}
 
 	return (
-		<div className="h-screen flex justify-center items-center">
+		<div className="h-screen flex justify-center items-center px-5">
 			<Card sx={{ width: 400 }}>
 				<CardContent>
 					<Typography variant="h4" color="primary">
@@ -90,7 +90,7 @@ export default function Login() {
 						variant="standard"
 						fullWidth
 						onChange={(e) => setEmail(e.target.value)}
-						className="mb-6"
+						className=""
 					/>
 					<TextField
 						value={password}
@@ -99,7 +99,7 @@ export default function Login() {
 						fullWidth
 						onChange={(e) => setPassword(e.target.value)}
 						type={showPassword ? 'text' : 'password'}
-						className="mb-6"
+						sx={{paddingBottom: '1em'}}
 						InputProps={{
 							endAdornment: (
 								<InputAdornment position="end">
