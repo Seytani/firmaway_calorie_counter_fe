@@ -26,7 +26,6 @@ const SectionEntryMenuButton: React.FC<Props> = ({ entry }) => {
   }
 
   function handleEditOpen() {
-    setAnchorEl(null)
     setIsEditDialogOpen(true)
   }
 
