@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: #6c757d;
+    --text-primary: #6c757d;
+    --text-secondary: #f8f9faff;
+    --color-primary: #76c893;
+    --color-green-5: #52b69a;
+    --color-danger: #e01e37;
+    --background-start-rgb: #f8f9fa;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background-start-rgb);
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: local("Pacifico"), url("../assets/fonts/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url("../assets/fonts/Montserrat-Regular.ttf");
+}
+
+.MuiDrawer-paper {
+  color: var(--text-secondary);
+  background-color: var(--color-primary);
+  border: none;
+}
+
+.MuiDivider-root {
+  background-color: -- var(--color-green-5);
+}
+
+.error-message {
+  color: var(--color-danger);
 }
